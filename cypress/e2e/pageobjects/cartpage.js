@@ -1,6 +1,8 @@
 export class Cartpage
 {
 
+    
+
     Customername_tab = '#name'
     Customercountry_tab = '#country'
     Customercity_tab = '#city'
