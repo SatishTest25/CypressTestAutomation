@@ -1,7 +1,7 @@
 export class Homepage
 {
 
-    clkHometab(){
+    clickHometab(){
         cy.wait(2000)
         cy.xpath('//*[@id="navbarExample"]/ul/li[1]/a').click()
     } 

@@ -10,13 +10,13 @@ export class Cartpage
     Customermonth_tab = '#month'
     Customeryear_tab = '#year'
 
-clkCarttab(){
+clickCarttab(){
     cy.wait(2000)
     cy.xpath('//*[@id="navbarExample"]/ul/li[4]/a').click()
 
 }
 
-clkPlaceorder(){
+clickPlaceorder(){
     cy.contains('Place Order').click()
     cy.wait(2000)
     cy.get(this.Customername_tab).type('Satish')
