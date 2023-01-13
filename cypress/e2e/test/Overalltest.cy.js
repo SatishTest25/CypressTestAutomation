@@ -10,7 +10,7 @@ const homepage = new Homepage()
 const cartpage = new Cartpage()
 
 
-it('Page Object pattern practice', () => {
+it('Overall Cypress automation run', () => {
     cy.visit('https://www.demoblaze.com/')
 
     loginpage.clickLogtab()

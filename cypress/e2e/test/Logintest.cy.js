@@ -1,32 +1,38 @@
-
 import { Loginpage } from "../pageobjects/loginpage"
 
 const loginpage = new Loginpage()
-
 describe ('All login test', () => {
 
     beforeEach(function(){
-        cy.visit('https://www.demoblaze.com/')
+        cy.visit(Cypress.config().baseUrl)
     })
 
-    it('Page Object pattern practice', () => {
+    it('verify login functionality with correct credential', () => {
         
     
         loginpage.clickLogtab()
-        loginpage.enterUsername('satishcric')
-        loginpage.enterPassword('satish123')
+        loginpage.enterUsername(Cypress.config().userId)
+        loginpage.enterPassword(Cypress.config().Password)
         loginpage.clickLoginbutton()
-       // cy.contains('Welcome').click()
     
     })
     
-    it('Page Object pattern practice', () => {
+    it('verify login functionality with incorrect credential', () => {
         
         loginpage.clickLogtab()
-        loginpage.enterUsername('dream11')
-        loginpage.enterPassword('skysports')
+        loginpage.enterUsername(Cypress.config().userId1)
+        loginpage.enterPassword(Cypress.config().Password1)
         loginpage.clickLoginbutton()
        // cy.contains('Welcome').click()
+
+    })
+
+    it('verify login functionality with null credential', () => {
+        
+        loginpage.clickLogtab()
+        loginpage.enterUsername(Cypress.config().userId2)
+        loginpage.enterPassword(Cypress.config().Password2)
+        loginpage.clickLoginbutton()
 
     })
     
